@@ -1,0 +1,355 @@
+###############################################################################
+#
+# IAR ELF Linker V8.50.9.278/W32 for ARM                  17/Aug/2025  09:43:47
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =
+#        E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Exe\DRIVE seven segment.out
+#    Map file     =
+#        E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\List\DRIVE seven segment.map
+#    Command line =
+#        -f C:\Users\PARDAZ~1\AppData\Local\Temp\EWA22A.tmp
+#        ("E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\main.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\seven_segment_3_ANOD.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\startup_stm32f030x6.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_cortex.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_dma.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_exti.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_flash.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_flash_ex.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_gpio.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_i2c.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_i2c_ex.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_msp.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_pwr.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_pwr_ex.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_rcc.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_hal_rcc_ex.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\stm32f0xx_it.o"
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\Obj\system_stm32f0xx.o"
+#        --no_out_extension -o "E:\electronic\barname\stm32\MyCalculatot\with
+#        keil\DRIVE seven segment\EWARM\DRIVE seven segment\Exe\DRIVE seven
+#        segment.out" --redirect _Printf=_PrintfFullNoMb --redirect
+#        _Scanf=_ScanfFullNoMb --map
+#        "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven
+#        segment\EWARM\DRIVE seven segment\List\DRIVE seven segment.map"
+#        --config "E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE
+#        seven segment\EWARM/stm32f030x6_flash.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'7fff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'0fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xb0
+  .intvec            ro code   0x800'0000    0xb0  startup_stm32f030x6.o [1]
+                             - 0x800'00b0    0xb0
+
+"P1":                                      0x1073
+  .text              ro code   0x800'00b0   0x590  stm32f0xx_hal_rcc.o [1]
+  .text              ro code   0x800'0640     0xc  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'064c    0x48  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'0694    0xae  I32DivModFast.o [4]
+  .text              ro code   0x800'0742     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'0744    0x8c  stm32f0xx_hal_cortex.o [1]
+  .text              ro code   0x800'07d0     0x2  IntDivZer.o [4]
+  .text              ro code   0x800'07d2     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'07d4   0x208  seven_segment_3_ANOD.o [1]
+  .text              ro code   0x800'09dc    0x26  FltCmpLe.o [3]
+  .text              ro code   0x800'0a02     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'0a04    0x26  FltToU32.o [3]
+  .text              ro code   0x800'0a2a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'0a2c    0x20  IxxToFlt.o [3]
+  .text              ro code   0x800'0a4c   0x120  FltAddSub.o [3]
+  .text              ro code   0x800'0b6c    0xb0  FltMul.o [3]
+  .text              ro code   0x800'0c1c    0x3a  FltToS32.o [3]
+  .text              ro code   0x800'0c56     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'0c58   0x1a0  stm32f0xx_hal_gpio.o [1]
+  .text              ro code   0x800'0df8    0x28  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'0e20    0xfc  main.o [1]
+  .text              ro code   0x800'0f1c    0x20  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'0f3c    0x14  memset.o [4]
+  .text              ro code   0x800'0f50    0x30  stm32f0xx_hal_msp.o [1]
+  .text              ro code   0x800'0f80    0x4e  ABImemset.o [4]
+  .text              ro code   0x800'0fce    0x3c  packbits_init_single.o [4]
+  .text              ro code   0x800'100a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'100c    0x28  data_init.o [4]
+  .iar.init_table    const     0x800'1034    0x10  - Linker created -
+  .text              ro code   0x800'1044    0x1e  cmain.o [4]
+  .text              ro code   0x800'1062     0x4  low_level_init.o [2]
+  .text              ro code   0x800'1066     0x8  exit.o [2]
+  .text              ro code   0x800'106e     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1070     0xa  cexit.o [4]
+  .text              ro code   0x800'107a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'107c    0x14  exit.o [5]
+  .text              ro code   0x800'1090    0x1c  cstartup_M.o [4]
+  .text              ro code   0x800'10ac    0x14  system_stm32f0xx.o [1]
+  .text              ro code   0x800'10c0    0x10  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10d0    0x10  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'10e0    0x10  stm32f0xx_it.o [1]
+  .text              ro code   0x800'10f0     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10f2     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10f4     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10f6     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10f8     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10fa     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10fc     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'10fe     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1100     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1102     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1104     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1106     0x2  startup_stm32f030x6.o [1]
+  .rodata            const     0x800'1108     0x0  packbits_init_single.o [4]
+  Initializer bytes  const     0x800'1108    0x1b  <for P2-1>
+                             - 0x800'1123  0x1073
+
+"P2", part 1 of 2:                           0x28
+  P2-1                        0x2000'0000    0x28  <Init block>
+    .data            inited   0x2000'0000    0x18  seven_segment_3_ANOD.o [1]
+    .data            inited   0x2000'0018     0xc  stm32f0xx_hal.o [1]
+    .data            inited   0x2000'0024     0x4  system_stm32f0xx.o [1]
+                            - 0x2000'0028    0x28
+
+"P2", part 2 of 2:                          0x400
+  CSTACK                      0x2000'0028   0x400  <Block>
+    CSTACK           uninit   0x2000'0028   0x400  <Block tail>
+                            - 0x2000'0428   0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'1123   0x800'7fff  0x6edd
+  0x2000'0428  0x2000'0fff   0xbd8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x1b (67% of destination):
+           0x800'1108  0x1b
+    1 destination range, total size 0x28:
+          0x2000'0000  0x28
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven segment\EWARM\DRIVE seven segment\Obj: [1]
+    main.o                      252
+    seven_segment_3_ANOD.o      520       16       24
+    startup_stm32f030x6.o       232
+    stm32f0xx_hal.o             172        8       12
+    stm32f0xx_hal_cortex.o      140
+    stm32f0xx_hal_gpio.o        416
+    stm32f0xx_hal_msp.o          48
+    stm32f0xx_hal_rcc.o       1'424
+    stm32f0xx_it.o               16
+    system_stm32f0xx.o           20        3        4
+    -------------------------------------------------
+    Total:                    3'240       27       40
+
+dl6M_tln.a: [2]
+    exit.o                        8
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       12
+
+m6M_tl.a: [3]
+    FltAddSub.o                 288
+    FltCmpLe.o                   38
+    FltMul.o                    176
+    FltToS32.o                   58
+    FltToU32.o                   38
+    IxxToFlt.o                   32
+    -------------------------------------------------
+    Total:                      630
+
+rt6M_tl.a: [4]
+    ABImemset.o                  78
+    I32DivModFast.o             174
+    IntDivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 28
+    data_init.o                  40
+    memset.o                     20
+    packbits_init_single.o       60
+    -------------------------------------------------
+    Total:                      442
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        16    1'024
+-----------------------------------------------------
+    Grand Total:              4'344       43    1'064
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'1034          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'1044          --   Gb  - Linker created -
+?main                    0x800'1045         Code  Gb  cmain.o [4]
+AHBPrescTable            0x800'10b0   0x10  Data  Gb  system_stm32f0xx.o [1]
+CSTACK$$Base            0x2000'0028          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0428          --   Gb  - Linker created -
+Error_Handler            0x800'0f19    0x4  Code  Gb  main.o [1]
+HAL_Delay                0x800'0df9   0x28  Code  Wk  stm32f0xx_hal.o [1]
+HAL_GPIO_Init            0x800'0c59  0x17c  Code  Gb  stm32f0xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'0dd5    0xc  Code  Gb  stm32f0xx_hal_gpio.o [1]
+HAL_GetTick              0x800'0641    0xc  Code  Wk  stm32f0xx_hal.o [1]
+HAL_IncTick              0x800'10d1   0x10  Code  Wk  stm32f0xx_hal.o [1]
+HAL_Init                 0x800'0f1d   0x1a  Code  Gb  stm32f0xx_hal.o [1]
+HAL_InitTick             0x800'064d   0x48  Code  Wk  stm32f0xx_hal.o [1]
+HAL_MspInit              0x800'0f51   0x30  Code  Gb  stm32f0xx_hal_msp.o [1]
+HAL_NVIC_SetPriority     0x800'07b3    0x8  Code  Gb  stm32f0xx_hal_cortex.o [1]
+HAL_RCC_ClockConfig      0x800'04b9   0xfc  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'05bd   0x3a  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPLLMULFactorTable
+                         0x800'0620   0x10  Data  Lc  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPredivFactorTable
+                         0x800'0630   0x10  Data  Lc  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x800'00b1  0x404  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_SYSTICK_Config       0x800'07bb    0x8  Code  Gb  stm32f0xx_hal_cortex.o [1]
+HardFault_Handler        0x800'10e3    0x2  Code  Gb  stm32f0xx_it.o [1]
+MX_GPIO_Init             0x800'0e8f   0x7a  Code  Lc  main.o [1]
+NMI_Handler              0x800'10e1    0x2  Code  Gb  stm32f0xx_it.o [1]
+PendSV_Handler           0x800'10e7    0x2  Code  Gb  stm32f0xx_it.o [1]
+Region$$Table$$Base      0x800'1034          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'1044          --   Gb  - Linker created -
+SVC_Handler              0x800'10e5    0x2  Code  Gb  stm32f0xx_it.o [1]
+SysTick_Config           0x800'0789   0x2a  Code  Lc  stm32f0xx_hal_cortex.o [1]
+SysTick_Handler          0x800'10e9    0x8  Code  Gb  stm32f0xx_it.o [1]
+SystemClock_Config       0x800'0e3b   0x54  Code  Gb  main.o [1]
+SystemCoreClock         0x2000'0024    0x4  Data  Gb  system_stm32f0xx.o [1]
+SystemInit               0x800'10ad    0x2  Code  Gb  system_stm32f0xx.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'0fff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__NVIC_SetPriority       0x800'0745   0x44  Code  Lc  stm32f0xx_hal_cortex.o [1]
+__aeabi_cfcmple          0x800'09dd         Code  Gb  FltCmpLe.o [3]
+__aeabi_f2iz             0x800'0c1d         Code  Gb  FltToS32.o [3]
+__aeabi_f2uiz            0x800'0a05         Code  Gb  FltToU32.o [3]
+__aeabi_fadd             0x800'0a4d         Code  Gb  FltAddSub.o [3]
+__aeabi_fmul             0x800'0b6d         Code  Gb  FltMul.o [3]
+__aeabi_fsub             0x800'0abd         Code  Gb  FltAddSub.o [3]
+__aeabi_idiv0            0x800'07d1         Code  Gb  IntDivZer.o [4]
+__aeabi_memset           0x800'0f81         Code  Gb  ABImemset.o [4]
+__aeabi_ui2f             0x800'0a2d         Code  Gb  IxxToFlt.o [3]
+__aeabi_uidiv            0x800'0695         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod         0x800'0695         Code  Gb  I32DivModFast.o [4]
+__cmain                  0x800'1045         Code  Gb  cmain.o [4]
+__exit                   0x800'107d   0x14  Code  Gb  exit.o [5]
+__iar_Memset4_word       0x800'0fa1         Code  Gb  ABImemset.o [4]
+__iar_Memset_word        0x800'0f8d         Code  Gb  ABImemset.o [4]
+__iar_data_init3         0x800'100d   0x28  Code  Gb  data_init.o [4]
+__iar_packbits_init_single3
+                         0x800'0fcf   0x3c  Code  Gb  packbits_init_single.o [4]
+__iar_program_start      0x800'1091         Code  Gb  cstartup_M.o [4]
+__low_level_init         0x800'1063    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f030x6.o [1]
+_call_main               0x800'1051         Code  Gb  cmain.o [4]
+_exit                    0x800'1071         Code  Gb  cexit.o [4]
+_main                    0x800'105b         Code  Gb  cmain.o [4]
+dig                     0x2000'0000    0x4  Data  Lc  seven_segment_3_ANOD.o [1]
+exit                     0x800'1067    0x8  Code  Gb  exit.o [2]
+float_to_string          0x800'07d5   0xa8  Code  Lc  seven_segment_3_ANOD.o [1]
+levelprogressseg        0x2000'0004    0x1  Data  Lc  seven_segment_3_ANOD.o [1]
+main                     0x800'0e21   0x1a  Code  Gb  main.o [1]
+memset                   0x800'0f3d   0x14  Code  Gb  memset.o [4]
+pin_value                0x800'087d   0x84  Code  Lc  seven_segment_3_ANOD.o [1]
+segment_data            0x2000'0008    0xc  Data  Lc  seven_segment_3_ANOD.o [1]
+sevenSeg_update_Digit    0x800'0901   0x72  Code  Gb  seven_segment_3_ANOD.o [1]
+sevenSeg_write_number    0x800'0973   0x5c  Code  Gb  seven_segment_3_ANOD.o [1]
+timedelayseg            0x2000'0014    0x4  Data  Lc  seven_segment_3_ANOD.o [1]
+uwTick                  0x2000'001c    0x4  Data  Gb  stm32f0xx_hal.o [1]
+uwTickFreq              0x2000'0018    0x1  Data  Gb  stm32f0xx_hal.o [1]
+uwTickPrio              0x2000'0020    0x4  Data  Gb  stm32f0xx_hal.o [1]
+
+
+[1] = E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven segment\EWARM\DRIVE seven segment\Obj
+[2] = dl6M_tln.a
+[3] = m6M_tl.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  4'344 bytes of readonly  code memory
+     43 bytes of readonly  data memory
+  1'064 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

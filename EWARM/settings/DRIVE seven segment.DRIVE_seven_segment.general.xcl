@@ -1,0 +1,15 @@
+"D:\New folder\program_installer_location\iar for arm\arm\bin\armproc.dll" 
+
+"D:\New folder\program_installer_location\iar for arm\arm\bin\armstlink2.dll" 
+
+"E:\electronic\barname\stm32\MyCalculatot\with keil\DRIVE seven segment\EWARM\DRIVE seven segment\Exe\DRIVE seven segment.out" 
+
+--plugin="D:\New folder\program_installer_location\iar for arm\arm\bin\armbat.dll" 
+
+--device_macro="D:\New folder\program_installer_location\iar for arm\arm\config\debugger\ST\STM32F0xx.dmac" 
+
+--flash_loader="D:\New folder\program_installer_location\iar for arm\arm\config\flashloader\ST\FlashSTM32F03xx4.board" 
+
+
+
+
