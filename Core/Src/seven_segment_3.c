@@ -1,5 +1,5 @@
 
-#include "seven_segment_3_ANOD.h"
+#include "seven_segment_3.h"
 
 
 static unsigned char segment_data[10] = {3,159,37,13,153,73,65,31,1,9};

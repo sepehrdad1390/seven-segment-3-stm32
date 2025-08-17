@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "seven_segment_3_ANOD.h"
+#include "seven_segment_3.h"
     
 /* USER CODE END Includes */
 
